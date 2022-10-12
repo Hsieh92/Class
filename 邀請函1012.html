@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function updateTextInput(val) {document.getElementById('textInput').value=val; }
+        </script>
+        </head>
+<body>
+
+<h1>邀請函</h1>
+
+<p><strong>請填寫以下資訊</strong></p>
+
+<form action="/action_page.php">
+
+    <label for="name">姓名:</label><br>
+    <input type="text" id="name" name="name" value=""><br>
+    <label for="PNO">人數 (最多10位):</label>
+    <input type="range" id="PNO" name="PNO" min="0" max="10"onchange="updateTextInput(this.value);">
+    <input type="text" id="textInput" value=""><br>
+<P></P>
+<label for="email">email:</label>
+<input type="email" id="email" name="email"><br>
+<P></P>
+  <label for="phone">手機:</label>
+  <input type="tel" id="phone" name="phone" placeholder="0900000000" pattern="[0-9]{10}"><br><br>
+<label for="color">最喜歡color:</label>
+<input type="color" id="color" name="color" value="#ff0000">
+<P></P>
+<label for="Date">填表日期:</label>
+<input type="Date" id="Date" name="Date">
+<P></P>
+<label for="REL">主要關係:</label>
+<input list="REL" name="REL">
+<datalist id="REL">
+  <option value="未明確" value="U">
+  <option value="朋友"value="F">
+  <option value="家人"value="Fs">
+
+<input type="MESSAGE" onclick="alert('我很開心！')" value="MESSAGE">
+
+</datalist>
+<P></P>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
